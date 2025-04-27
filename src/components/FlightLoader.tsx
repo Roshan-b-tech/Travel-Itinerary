@@ -51,11 +51,11 @@ const FlightLoader = ({ onComplete }: { onComplete: () => void }) => {
     return (
         <div
             className="fixed inset-0 z-[9999] flex items-center justify-start bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url("public/pexels-pixabay-314726.jpg")' }}
+            style={{ backgroundImage: 'url("/pexels-pixabay-314726.jpg")' }}
         >
             <div ref={planeRef} className="m-8 flex flex-col items-center">
                 <img
-                    src="public/n.png"
+                    src="/n.png"
                     alt="Loader"
                     className="w-80 h-80 object-contain"
                 />
