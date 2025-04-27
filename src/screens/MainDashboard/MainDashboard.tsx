@@ -86,9 +86,6 @@ export const MainDashboard = ({ theme, onToggleTheme }: MainDashboardProps): JSX
           {showProfile && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
               <div className={`relative w-full max-w-sm mx-auto p-6 rounded-2xl shadow-xl border ${theme === 'dark' ? 'border-gray-200 bg-backgrounddark' : 'border-primaryblue bg-white'}`}>
-                <button onClick={() => setShowProfile(false)} className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 hover:bg-gray-300 z-10">
-                  ×
-                </button>
                 <div className="flex flex-col items-center">
                   <Avatar className="w-20 h-20 bg-primaryred mb-4">
                     <div className="relative w-fit [font-family:'Mont-Regular',Helvetica] font-normal text-white text-3xl tracking-[0] leading-4 whitespace-nowrap">C</div>

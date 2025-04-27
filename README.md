@@ -85,6 +85,36 @@ src/
 - Activity planning
 - Interactive calendar
 
+## Project Structure & Component Hierarchy
+
+### Folder Structure
+- `src/components/ui/` – Reusable UI components (Avatar, Badge, Card, etc.)
+- `src/screens/Onboarding/` – Onboarding and landing page components
+- `src/screens/MainDashboard/` – Main dashboard and all its sections
+- `src/screens/MainDashboard/sections/` – Feature-specific sections (TokyoByAnima, FlightDetailsByAnima, etc.)
+- `src/lib/` – Utility functions
+
+### Component Hierarchy
+- `App.tsx` (entry point)
+  - `MainDashboard`
+    - `ThemeToggle` (theme switcher)
+    - `Avatar` (user profile, opens modal)
+    - `DivByAnima` (user profile section)
+    - `TokyoByAnima` (trip overview, opens modal)
+    - `FlightDetailsByAnima` (flight info, opens modal)
+    - `FrameByAnima`, `DivWrapperByAnima`, `FrameWrapperByAnima` (accommodation, activities, etc.)
+    - `ActivitiesDetailsByAnima`, `ActsByAnima` (activity planning)
+    - `DetailPane` (activity details side pane)
+    - `BottomNavBar` (navigation)
+
+### Challenges Faced
+- **Modal scrolling on mobile:** Ensuring modals are fully scrollable and borders visible on all devices required careful use of flex alignment, max-height, and iOS-specific scrolling styles.
+- **Responsive design:** Making all modals, cards, and sections look good and function well on both desktop and mobile required many adjustments to max-width, padding, and margins.
+- **Theme handling:** Supporting both light and dark themes throughout the app, including modals and overlays, required conditional classes and testing.
+- **Component reusability:** Structuring UI components for reuse while keeping them flexible for different sections.
+
+For further details, see comments in the codebase or reach out to the maintainer.
+
 ## Contributing
 
 1. Fork the repository
